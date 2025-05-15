@@ -1,0 +1,159 @@
+:root{
+	--font-main: 'Poppins', sans-serif;
+	--font-header: 'Raleway', serif;
+	--bg-color-1: #e2e9fc;
+	--bg-color-2: #721919;
+	--bg-color-3: #110c0c;
+	--text-color-1: #d6343469;
+	--text-color-2: #fff;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: var(--font-main);
+	background-color: var(--bg-color-1);
+	color: var(--text-color-1);
+}
+header{
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color: var(--bg-color-2);
+	color: var(--text-color-2);
+}
+h1, h2{
+	font-family: var(--font-header);
+}
+
+nav a{
+	color: var(--text-color-2);
+	text-decoration: none;
+	margin-left: 1.5rem;
+	font-weight: 500;
+}
+nav a:hover{
+	text-decoration: underline;
+}
+#hero{
+	text-align: center;
+	padding: 8rem 2rem 4rem;
+}
+#hero h2{
+	font-size: 2.5rem;
+}
+#hero p{
+	font-size: 1.5rem;
+}
+#about{
+	padding: 3rem 2rem;
+	text-align: center;
+}
+#about h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+#about p{
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+#projects{
+	padding: 3rem 2rem;
+	text-align: center;
+}
+#projects h2{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+.project-grid{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.project-card{
+	background-color: var(--bg-color-2);
+	padding: 2rem;
+	border-radius: 8px;
+	color: var(--text-color-2);
+}
+#contact{
+	padding: 3rem 2rem;
+	text-align: center;
+}
+#contact h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+#contact p{
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: 0 auto 2rem auto;
+}
+.contact-form{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 500px;
+	margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea{
+	padding: 0.75rem;
+	border: 1px solid var(--bg-color-2);
+	border-radius: 5px;
+	font-family: var(--font-main);
+}
+.contact-form button{
+	padding: 0.75rem;
+	border: none;
+	background-color: var(--bg-color-2);
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	color: var(--text-color-2);
+	transition: var(--bg-color-2) 0.3s;
+}
+.contact-form button:hover{
+	background-color: var(--bg-color-3);
+}
+.contact-form button:focus{
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+footer{
+	background-color: var(--bg-color-2);
+	color: var(--text-color-2);
+	text-align: center;
+	padding: 1rem;
+	margin-top: 2rem;
+	font-size: 0.9rem;
+}
+.social-icons{
+	margin-top: 1rem;
+}
+.social-icons a{
+	color: var(--text-color-2);
+	margin: 0 0.5rem;
+	font-size: 1.5rem;
+	transition: color 0.3s;
+}
+.social-icons a:hover{
+	color: var(--text-color-1);
+}
+@media (min-width: 768px){
+	.project-grid{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
